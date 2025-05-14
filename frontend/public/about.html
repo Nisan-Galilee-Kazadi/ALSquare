@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>À propos - ALS</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="/frontend/Images/logos.png" alt="logo" type="image/pgn">
+</head>
+<style>
+    .texte-size{
+        font-size: 16px ;
+    }
+    .text-color{
+        color: #0878c2;
+    }
+    .bg-btn{
+        background-color: #0878c2;
+    }
+    .our-border{
+        border: solid 2px #0878c2;
+    
+    }
+    .our-hover:hover{
+        margin-top: -50px;
+        transition: ease-in-out 0.3s;
+    }
+</style>
+<body class="bg-gray-50">
+    <!-- Navigation -->
+   <nav class="shadow-lg p-1 fixed w-full bg-blue-50 z-50 md:p-3 ">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between relative h-20 md:h-24">
+            <!-- Logo (gros, indépendant) -->
+            <a href="index.html" class="absolute top-1/2 -translate-y-1/2 left-4 md:left-6">
+                <img src="../Images/logos.png" alt="Logo AWC" class="h-40 -ml-5 -mt-20 md:h-60 md:w-96 md:-mt-28 md:-ml-28">
+            </a>
+            
+            <!-- Menu desktop (centré horizontalement, décalé à droite à cause du logo) -->
+            <div class="hidden md:flex space-x-4 font-semibold texte-size text-base md:text-lg ml-auto mr-40">
+                <a href="index.html" class="text-yellow-500 hover:text-color px-3 py-2">Accueil</a>
+                <a href="about.html" class="text-blue-500 px-3 py-2 transition">À propos</a>
+                <a href="services.html" class="text-yellow-500 hover:text-blue-500 px-3 py-2 transition">Services</a>
+                <a href="contact.html" class="text-yellow-500 hover:text-blue-500 px-3 py-2 transition">Contact</a>
+                <a href="formations.html" class="text-yellow-500 hover:text-blue-500 px-3 py-2 transition">Formations</a>
+                <a href="inscription.html" class="text-yellow-500 hover:text-blue-500 px-3 py-2 transition">Inscription</a>
+            </div>
+
+            <!-- Bouton desktop -->
+            <div class="block ml-80 md:ml-0 md:block">
+                <a href="inscription.html" class="bg-btn px-4 py-2 rounded text-white text-base font-medium hover:bg-blue-800 hover:text-yellow-500 transition">
+                    Souscrire !
+                </a>
+            </div>
+            
+            <!-- Hamburger mobile -->
+            <button id="hamburgerBtn" class="md:hidden p-2 focus:outline-none ml-auto">
+                <svg class="h-8 w-8 text-blue-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+            </button>
+        </div>
+
+
+        <!-- Menu mobile glissant -->
+        <div id="mobileMenu" class="fixed top-0 right-0 h-full w-full bg-blue-50 shadow-lg transform translate-x-full transition-transform duration-300 z-40 font-semibold overflow-hidden">
+            
+            <!-- Contenu du menu glissant -->
+            <div id="mobileMenuContent" class="relative flex flex-col items-center justify-center h-full transform translate-x-full transition-transform duration-300 delay-300">
+                
+                <!-- Bouton fermer (en haut à droite) -->
+                <button id="closeBtn" class="absolute top-6 right-6 focus:outline-none rounded-full border-2 border-yellow-500 p-1 bg-blue-50 shadow">
+                    <svg class="h-6 w-6 text-gray-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                </button>
+                
+                <!-- Liens du menu centrés -->
+                <div class="flex flex-col gap-6 texte-size items-center text-center">
+                    <a href="index.html" class="block text-blue-900">Accueil</a>
+                    <a href="about.html" class="block text-blue-900">À propos</a>
+                    <a href="services.html" class="block text-blue-900">Services</a>
+                    <a href="contact.html" class="block text-blue-900">Contact</a>
+                    <a href="formations.html" class="block text-blue-900">Formations</a>
+                    <a href="inscription.html" class="block text-blue-900">Inscription</a>
+                </div>
+            </div>
+        </div>
+
+    </nav>
+    <!-- About Header -->
+    <div class="bg-white pt-20">
+        <div class="max-w-7xl mx-auto py-16 px-4 sm:py-24 sm:px-6 lg:px-8">
+            <div class="text-center">
+                <h1 class="text-4xl font-extrabold text-blue-900 sm:text-5xl sm:tracking-tight lg:text-6xl">À propos de nous</h1>
+                <p class="max-w-xl mt-5 mx-auto text-xl text-gray-500">Découvrez notre histoire et nos valeurs</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Our Story -->
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-1 py-12">
+        <div class="bg-white p-6 rounded-lg shadow-lg">
+            <h2 class="text-3xl font-bold text-blue-900 mb-6 underline">I. Fondation et Vision </h2>
+            <div class="prose prose-lg max-w-none">
+                <p class="text-gray-600 mb-4">                    
+                    AL SQUARE Expertise a été fondée en Février 2019   par Alain ANDELE, un entrepreneur passionné par la formation de techniciens de surface et des femmes de ménages qualifiés. Dès le départ, notre vision était claire : offrir des Formations professionnels de nos Apprenants qui améliorent la vie quotidienne des particuliers et des entreprises. Nous avons commencé avec une petite équipe dédiée, déterminée à établir une réputation de confiance et d'excellence.
+                </p>
+            </div>
+        </div>
+
+        <div class="bg-white p-6 rounded-lg shadow-lg">
+            <h2 class="text-3xl font-bold text-blue-900 mb-6 underline">II. Croissance et Diversification Septembre 2022 </h2>
+            <div class="prose prose-lg max-w-none">
+                <p class="text-gray-600 mb-4">
+                    Au fil des années, nous avons élargi notre gamme de services pour répondre aux besoins croissants de notre clientèle. Nous avons intégré des services de de babysitting, de sécurité, des jardiniers et des chauffeurs tout en veillant à maintenir des normes élevées de qualité et de professionnalisme. Cette diversification a été motivée par notre engagement à offrir des solutions complètes et adaptées à chaque client.
+            </div>
+        </div>
+
+        <div class="bg-white p-6 rounded-lg shadow-lg">
+            <h2 class="text-3xl font-bold text-blue-900 mb-6 underline">III. Engagement envers la Formation 2022 </h2>
+            <div class="prose prose-lg max-w-none">
+                <p class="text-gray-600 mb-4">
+                    
+                    Conscients que la qualité de nos services repose sur les compétences de nos équipes, nous avons lancé en 2022 un programme de formation continue pour nos employés et clients. Ce programme vise à renforcer leurs compétences et à les tenir informés des meilleures pratiques dans leurs domaines respectifs. Cela nous a permis d'assurer un service toujours plus professionnel et efficace.
+                   
+                </p>
+                   
+               
+            </div>
+        </div>
+        
+        <div class="bg-white p-6 rounded-lg shadow-lg">
+            <h2 class="text-3xl font-bold text-blue-900 mb-6 underline">IV. Réputation et Satisfaction Client 2024 </h2>
+            <div class="prose prose-lg max-w-none">
+                <p class="text-gray-600 mb-4">   
+                        Grâce à notre dévouement et à notre approche centrée sur le client, AL SQUARE Expertise a rapidement gagné en popularité et en reconnaissance dans la région. Nous avons reçu de nombreux témoignages positifs de clients satisfaits, ce qui a contribué à renforcer notre réputation comme l'un des principaux fournisseurs de services dans notre secteur
+                 </p>
+            </div>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow-lg">
+            <h2 class="text-3xl font-bold text-blue-900 mb-6 underline">V. Perspectives d'Avenir </h2>
+            <div class="prose prose-lg max-w-none">
+                <p class="text-gray-600 mb-4">   
+                    Aujourd'hui, nous continuons d'évoluer et d'innover pour répondre aux besoins changeants de notre clientèle. Nous sommes déterminés à maintenir notre engagement envers la qualité, la fiabilité et la satisfaction du client. Avec des projets d'expansion et l'introduction de nouveaux services, AL Square Expertise  est prêt à relever les défis futurs tout en restant fidèle à ses valeurs fondamentales.
+                    
+                 </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Our Values -->
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+                <h2 class="text-4xl font-extrabold text-blue-900 sm:text-5xl sm:tracking-tight lg:text-6xl pb-8 self-center">Nos Valeurs</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-10">
+            <!-- Value 1 -->
+            <div class="bg-white p-6 rounded-lg shadow-lg">
+                <h3 class="text-xl font-bold text-blue-500 mb-2">1. Qualité </h3>
+                <p class="text-gray-600">
+                    La qualité est au cœur de tout ce que nous faisons chez Al Square expertise. Nous nous engageons à fournir des services qui dépassent les attentes de nos clients. Cela se traduit par des processus rigoureux de sélection et de formation de notre personnel, l'utilisation de produits et d'équipements de premier choix, et une attention méticuleuse aux détails. Nous croyons que chaque interaction avec nos clients doit être marquée par un niveau d'excellence qui renforce leur confiance en nous.
+                </p>
+            </div>
+            <!-- Value 2 -->
+            <div class="bg-white p-6 rounded-lg shadow-lg">
+                <h3 class="text-xl font-bold text-blue-500 mb-2">2. Innovation</h3>
+                <p class="text-gray-600">
+                    Dans un monde en constante évolution, l'innovation est essentielle pour rester pertinent et efficace. Chez Al Square Expertise, nous encourageons la créativité et l'adoption de nouvelles technologies pour améliorer nos services. Que ce soit par l'intégration de solutions numériques pour faciliter la communication avec nos clients ou l'exploration de nouvelles méthodes de travail, nous cherchons constamment à évoluer et à offrir des solutions modernes qui répondent aux besoins contemporains.
+                </p>
+            </div>
+            <!-- Value 3 -->
+            <div class="bg-white p-6 rounded-lg shadow-lg">
+                <h3 class="text-xl font-bold text-blue-500 mb-2">3. Intégrité  </h3>
+                <p class="text-gray-600">
+                    L'intégrité est la pierre angulaire de notre entreprise. Nous croyons en la transparence, l'honnêteté et la responsabilité dans toutes nos interactions. Cela signifie que nous tenons nos promesses et que nous agissons toujours dans le meilleur intérêt de nos clients et de nos employés. En cultivant un environnement de confiance, nous favorisons des relations durables et positives avec toutes les parties prenantes.
+
+                </p>
+            </div>
+            <!-- Value 3 -->
+            <div class="bg-white p-6 rounded-lg shadow-lg">
+                <h3 class="text-xl font-bold text-blue-500 mb-2">4. Ponctualité   </h3>
+                <p class="text-gray-600">
+                    La ponctualité est un signe de respect envers nos clients et leurs engagements. Nous comprenons que le temps est précieux, c'est pourquoi nous nous efforçons d'être toujours à l'heure, que ce soit pour des rendez-vous ou pour la livraison de services. Cette valeur reflète notre professionnalisme et notre dévouement à respecter les délais convenus, garantissant ainsi une expérience client fluide et sans stress.
+                </p>
+            </div>
+            <!-- Value 3 -->
+            <div class="bg-white p-6 rounded-lg shadow-lg">
+                <h3 class="text-xl font-bold text-blue-500 mb-2">5. Respect  </h3>
+                <p class="text-gray-600">
+                  Le respect est fondamental dans toutes nos interactions, tant avec nos clients qu'avec nos employés. Nous valorisons la diversité et croyons que chaque individu mérite d'être traité avec dignité. En créant un environnement inclusif et bienveillant, nous favorisons une culture d'équipe positive où chacun se sent valorisé et écouté. Ce respect mutuel contribue à renforcer notre cohésion interne et à améliorer la satisfaction client.
+
+                </p>
+            </div>
+        </div>
+        <h1 class="text-4xl font-extrabold text-blue-900 sm:text-5xl sm:tracking-tight lg:text-6xl pt-32">Notre Vision</h1>        
+        <div class="bg-white mt-10 p-6 rounded-lg shadow-lg">
+            <div class="prose prose-lg max-w-none">
+                <p class="text-gray-600 mb-4">   
+                         Devenir le leader régional en formation professionnelle pour les métiers essentiels, en proposant des programmes de qualité adaptés aux besoins des entreprises et des particuliers. Nous visons à améliorer l'employabilité de nos étudiants et à renforcer la performance de nos partenaires, grâce à une approche pratique axée sur l'excellence, l'innovation et le développement durable. »
+                 </p>
+            </div>
+        </div>
+
+        <h1 class="text-4xl font-extrabold text-blue-900 sm:text-5xl sm:tracking-tight lg:text-6xl pt-32">Notre Equipe</h1>        
+        <div class="bg-white mt-10 p-6 rounded-lg shadow-lg">
+            <div class="prose prose-lg max-w-none">
+                <p class="text-gray-600 mb-4">   
+                    Chez <strong class="text-blue-500">Al square Expertise</strong>, notre force réside dans notre équipe. Composée de professionnels passionnés et hautement qualifiés, chaque membre de notre équipe apporte une expertise unique et un engagement indéfectible envers l'excellence. 
+                </p>
+                <p class="text-gray-600 mb-4">   
+                   Nous croyons fermement que le succès de notre entreprise repose sur les talents et les compétences de nos collaborateurs. C'est pourquoi nous avons réuni des experts dans divers domaines, chacun formé pour répondre aux besoins spécifiques de nos clients. Que ce soit dans le domaine du service à la formation des Agents, et  de l'innovation technique, notre équipe travaille main dans la main pour garantir des résultats exceptionnels.
+ 
+                </p>
+                <p class="text-gray-600 mb-4">   
+                    La diversité de nos parcours et de nos expériences enrichit notre culture d'entreprise et nous permet d'aborder chaque défi avec créativité et efficacité. Nous encourageons une atmosphère de collaboration où chaque idée est valorisée, et où le respect et l'intégrité guident nos interactions.        
+                 </p>
+                <p class="text-gray-600 mb-4">   
+                    En choisissant Al square expertise, vous ne bénéficiez pas seulement d'un service de qualité ; vous avez également l'assurance d'une équipe dévouée qui met tout en œuvre pour dépasser vos attentes. Nous sommes fiers de notre professionnalisme et de notre capacité à établir des relations durables avec nos clients.      
+                 </p>
+                <p class="text-gray-600 mb-4">   
+                   Faites confiance à notre équipe pour vous accompagner quotidiennement. Ensemble, nous transformerons vos ambitions en réalité.     
+                 </p>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Call to Action -->
+    <div class="bg-yellow-500">
+        <div class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:py-16 lg:px-8 lg:flex lg:items-center lg:justify-between">
+            <h2 class="text-3xl font-extrabold tracking-tight text-white sm:text-4xl">
+                <span class="block">Prêt à travailler avec nous ?</span>
+                <span class="block text-blue-200">Contactez-nous dès aujourd'hui.</span>
+            </h2>
+            <div class="mt-8 flex lg:mt-0 lg:flex-shrink-0">
+                <div class="inline-flex rounded-md shadow">
+                    <a href="contact.html" class="inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-blue-600 bg-white hover:bg-blue-50">
+                        Nous contacter
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+     <!-- Footer -->
+    <footer class="bg-blue-900">
+        <div class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
+            <div class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div>
+                    <h3 class="text-white text-lg font-semibold mb-4">Contact</h3>
+                    <p class="text-gray-300">Email: alsquare2expertise@gmail.com</p>
+                    <p class="text-gray-300">Tél: +243 815181876 / 850102058</p>
+                </div>
+                <div class="w-96 m-5">
+                    <h3 class="text-white text-lg font-semibold mb-4 -ml-3">Liens rapides</h3>
+                    <ul class="space-y-1 -ml-3 flex flex-col sm:flex-row w-max justify-between items-start gap-3 text-center">
+                        <li><a href="index.html" class="text-gray-300 hover:text-white">Acceuil</a></li>
+                        <li><a href="services.html" class="text-gray-300 hover:text-white">A propos</a></li>
+                        <li><a href="services.html" class="text-gray-300 hover:text-white">Services</a></li>
+                        <li><a href="contact.html" class="text-gray-300 hover:text-white">Contact</a></li>
+                        <li><a href="formations.html" class="text-gray-300 hover:text-white">Formations</a></li>
+                        <li><a href="inscription.html" class="text-gray-300 hover:text-white">Inscription</a></li>
+                    </ul>
+                </div>
+                <div class="ml-2 md:ml-64">
+                    <h3 class="text-white text-lg font-semibold mb-4">Suivez-nous</h3>
+                    <div class="flex space-x-4">
+                        <!-- Social media icons will be added here -->
+                         <div class="flex space-x-4">
+                        <a href="#" class="text-blue-400 hover:text-yellow-500">
+                            <span class="sr-only">Facebook</span>
+                            <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path fill-rule="evenodd" d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z" clip-rule="evenodd"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="text-blue-400 hover:text-yellow-500">
+                            <span class="sr-only">Instagram</span>
+                            <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path fill-rule="evenodd" d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.067.06 1.407.06 4.123v.08c0 2.643-.012 2.987-.06 4.043-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.067.048-1.407.06-4.123.06h-.08c-2.643 0-2.987-.012-4.043-.06-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.047-1.024-.06-1.379-.06-3.808v-.63c0-2.43.013-2.784.06-3.808.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772A4.902 4.902 0 015.45 2.525c.636-.247 1.363-.416 2.427-.465C8.901 2.013 9.256 2 11.685 2h.63zm-.081 1.802h-.468c-2.456 0-2.784.011-3.807.058-.975.045-1.504.207-1.857.344-.467.182-.8.398-1.15.748-.35.35-.566.683-.748 1.15-.137.353-.3.882-.344 1.857-.047 1.023-.058 1.351-.058 3.807v.468c0 2.456.011 2.784.058 3.807.045.975.207 1.504.344 1.857.182.466.399.8.748 1.15.35.35.683.566 1.15.748.353.137.882.3 1.857.344 1.054.048 1.37.058 4.041.058h.08c2.597 0 2.917-.01 3.96-.058.976-.045 1.505-.207 1.858-.344.466-.182.8-.398 1.15-.748.35-.35.566-.683.748-1.15.137-.353.3-.882.344-1.857.048-1.055.058-1.37.058-4.041v-.08c0-2.597-.01-2.917-.058-3.96-.045-.976-.207-1.505-.344-1.858a3.097 3.097 0 00-.748-1.15 3.098 3.098 0 00-1.15-.748c-.353-.137-.882-.3-1.857-.344-1.023-.047-1.351-.058-3.807-.058zM12 6.865a5.135 5.135 0 110 10.27 5.135 5.135 0 010-10.27zm0 1.802a3.333 3.333 0 100 6.666 3.333 3.333 0 000-6.666zm5.338-3.205a1.2 1.2 0 110 2.4 1.2 1.2 0 010-2.4z" clip-rule="evenodd"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="text-blue-400 hover:text-yellow-500">
+                            <span class="sr-only">Twitter</span>
+                            <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84"/>
+                            </svg>
+                        </a>
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+        <div class="bg-blue-100 text-blue-900 font-bold flex items-center justify-center text-center p-6">
+           <p class="self-center">Copyright &copy; <script>document.write(new Date().getFullYear())</script> , <span><a href="https://www.linkedin.com/in/galil%C3%A9e-kazadi-4112a833b/" style="text-decoration: none;color: #b76f11;">Nisan-Galilée Kazadi</a></span> Tout droit Réservé </p>
+        </div>
+    </footer>
+    
+   
+
+    <script src="../js/main.js"></script>
+</body>
+</html> 
